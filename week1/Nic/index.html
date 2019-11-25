@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./styles.css">
+        <link rel="stylesheet" href="css/all.min.css">
+        <title>HICKIES Original</title>
+
+
+        <script type="text/javascript">
+            var color="";
+            var colorHash="";
+            var savedColor="";
+            var savedHash="";
+            var itterant=0;
+
+            function changeColor(newColor, newHash){
+                color=newColor;
+                colorHash=newHash;
+            }
+            function addToCart(){
+                document.getElementById('addition_to_class_color_name').innerHTML=color;
+                document.getElementById('popup').style.display='inline-block'; changeColorName();
+                savedHash=colorHash;
+                savedColor=color;
+            }
+            function agree(){
+                // document.getElementById('addition_to_cart_number').innerHTML;
+                document.getElementById('popup').style.display='none'
+
+                if(document.getElementById(savedHash)){
+                    document.getElementById(savedHash).childNodes[1].innerHTML=itterant;
+                }
+                else{
+                    var temp=document.createElement('i');
+                    temp.className="fas fa-5x fa-circle";
+                    temp.innerHTML="hello";
+                    temp.style.color=savedHash;
+                    temp=savedHash;
+                    document.getElementById('checkout_details').appendChild(temp);
+                } 
+            }
+        </script>
+    </head>
+
+    <body style="overflow:auto;">
+        <header>
+            <h1><strong>HICKIES Original</strong></h1>
+        </header>
+
+        <!-- Rating section -->
+        <section class="star_rating">
+            <!-- ul of stars -->
+            <ul>
+                <span><i class="fas fa-star"></i></span>
+                <span><i class="fas fa-star"></i></span>
+                <span><i class="fas fa-star"></i></span>
+                <span><i class="fas fa-star-half-alt"></i></span>
+                <span><i class="far fa-star"></i></span>
+
+                <!--TOtal number of reviews-->
+                <span class="rating" id="rating_value">1293 reviews</span>
+            </ul>
+        </section>
+
+        <!-- Main Function for purchase -->
+        <main>
+            <div class="purchase">
+                <!-- Price and discount of colour -->
+                <ul>
+                    <span class="discounted_price" id="discounted_price">$14.99</span>
+                    <span class="original_price" id="original_price">$17.99</span>
+                    <span class="discount" id="discount">25%OFF</span>
+                </ul>
+                <!-- Exxclusivity of color selected? -->
+                <p>ONLINE EXCLUSIVE</p>
+            </div>
+
+            <div class="colors">
+                <!-- Color Indication text -->
+                <span class="color_text" id="color_text"><strong>COLOR:</strong></span>
+                
+                <!-- Colored dots -->
+                <ul>
+                    <input type="radio" name="color" id="color_a30000" onclick="changeColor('Very Red','#a30000')">
+                    <label for="color_a30000">
+                        <span class="circle"><i class="fas fa-2x fa-circle" style="color: #a30000;"></i></span>
+                        <span class="name">Very Red</span>
+                    </label>
+                    <input type="radio" name="color" id="color_4b00ad" onclick="changeColor('Super Purple','#4b00ad')">
+                    <label for="color_4b00ad">
+                        <span class="circle"><i class="fas fa-2x fa-circle" style="color: #4b00ad;"></i></span>
+                        <span class="name">Super Purple</span>  
+                    </label>
+                    <input type="radio" name="color" id="color_000000" onclick="changeColor('Black','#000000')">
+                    <label for="color_000000">
+                        <span class="circle"><i class="fas fa-2x fa-circle" style="color: #000000;"></i></span>
+                        <span class="name">Black</span>  
+                    </label>
+                    <input type="radio" name="color" id="color_ffffff" onclick="changeColor('White','#ffffff')">
+                    <label for="color_ffffff">
+                        <span class="circle"><i class="fas fa-2x fa-circle" style="color: #ffffff;"></i></span>
+                        <span class="name">White</span>  
+                    </label>
+                    <input type="radio" name="color" id="color_ff8c00" onclick="changeColor('Orange','#ff8c00')">
+                    <label for="color_ff8c00">
+                        <span class="circle"><i class="fas fa-2x fa-circle" style="color: #ff8c00;"></i></span>
+                        <span class="name">Orange</span>  
+                    </label>
+                    <input type="radio" name="color" id="color_fffb00" onclick="changeColor('Sun yellow','#fffb00')">
+                    <label for="color_fffb00">
+                        <span class="circle"><i class="fas fa-2x fa-circle" style="color: #fffb00;"></i></span>
+                        <span class="name">Sun yellow</span>  
+                    </label>
+                    <input type="radio" name="color" id="color_070082" onclick="changeColor('Ocean Blue','#070082')">
+                    <label for="color_070082">
+                        <span class="circle"><i class="fas fa-2x fa-circle" style="color: #070082;"></i></span>
+                        <span class="name">Ocean Blue</span>  
+                    </label>
+                    <input type="radio" name="color" id="color_041f45" onclick="changeColor('Deep Blue','#041f45')">
+                    <label for="color_041f45">
+                        <span><i class="fas fa-2x fa-circle" style="color: #041f45;"></i></span>
+                        <span class="name">Deep Blue</span>  
+                    </label>
+                    <input type="radio" name="color" id="color_a37e52" onclick="changeColor('Dirty brown','#a37e52')">
+                    <label for="color_a37e52">
+                        <span class="circle"><i class="fas fa-2x fa-circle" style="color: #a37e52;"></i></span>
+                        <span class="name">Dirty brown</span>  
+                    </label>
+                    <input type="radio" name="color" id="color_05b9f0" onclick="changeColor('Light blue','#05b9f0')">
+                    <label for="color_05b9f0">
+                        <span class="circle"><i class="fas fa-2x fa-circle" style="color: #05b9f0;"></i></span>
+                        <span class="name">Light blue</span>  
+                    </label>
+                    <input type="radio" name="color" id="color_0fff03" onclick="changeColor('Green','#0fff03')">
+                    <label for="color_0fff03">
+                        <span class="circle"><i class="fas fa-2x fa-circle" style="color: #0fff03;"></i></span>
+                        <span class="name">Green</span>  
+                    </label>
+                    <input type="radio" name="color" id="color_ff03e2" onclick="changeColor('Bright Pink','#ff03e2')">
+                    <label for="color_ff03e2">
+                        <span class="circle"><i class="fas fa-2x fa-circle" style="color: #ff03e2;"></i></span>
+                        <span class="name">Bright Pink</span>  
+                    </label>
+                    <input type="radio" name="color" id="color_c9ae73" onclick="changeColor('Dirty orange','#c9ae73')">
+                    <label for="color_c9ae73">
+                        <span class="circle"><i class="fas fa-2x fa-circle" style="color: #c9ae73;"></i></span>
+                        <span class="name">Dirty orange</span>  
+                    </label>
+                    <input type="radio" name="color" id="color_067d34" onclick="changeColor('Dark Green','#067d34')">
+                    <label for="color_067d34">
+                        <span class="circle"><i class="fas fa-2x fa-circle" style="color: #067d34;"></i></span>
+                        <span class="name">Dark Green</span>  
+                    </label>
+                    <input type="radio" name="color" id="color_4b364f" onclick="changeColor('Dark Purple','#4b364f')">
+                    <label for="color_4b364f">
+                        <span class="circle"><i class="fas fa-2x fa-circle" style="color: #4b364f;"></i></span>
+                        <span class="name">Dark Purple</span>  
+                    </label>
+                    <input type="radio" name="color" id="color_593b06" onclick="changeColor('Dark Brown','#593b06')">
+                    <label for="color_593b06">
+                        <span class="circle"><i class="fas fa-2x fa-circle" style="color: #593b06;"></i></span>
+                        <span class="name">Dark Brown</span>  
+                    </label>
+                    <input type="radio" name="color" id="color_57ffee" onclick="changeColor('Very Light Blue','#57ffee')">
+                    <label for="color_57ffee">
+                        <span class="circle"><i class="fas fa-2x fa-circle" style="color: #57ffee;"></i></span>
+                        <span class="name">Very Light Blue</span>  
+                    </label>
+                    <input type="radio" name="color" id="color_c2bcb2" onclick="changeColor('Light grey','#c2bcb2')">
+                    <label for="color_c2bcb2">
+                        <span class="circle"><i class="fas fa-2x fa-circle" style="color: #c2bcb2;"></i></span>
+                        <span class="name">Light grey</span>  
+                    </label>
+                </ul>
+                <!-- size guid and custom fit text -->
+                <p><strong>Size Guide</strong></p>
+                <p><strong>Custom Fit</strong></p>
+
+                <!-- Purchasing count -->
+                <span class="purchasing_count" id="purchasing_count"><strong>0</strong></span>
+                <button class="add_to_cart" id="add_to_cart" onclick="addToCart();"><strong>Add to Cart</strong></button>
+
+            </div>
+            
+            <!-- Popup -->
+            <article class="popup" id="popup">
+                <h4></span><strong>Please add the quantitiy of the item you have selected</strong></h4>
+                <span class="color" id="addition_to_class_color_name"><strong></strong></span>
+                <div class="change">
+                    <button class="number_minus" onclick="document.getElementById('addition_to_cart_number').innerHTML=parseInt(document.getElementById('addition_to_cart_number').innerHTML)-1; changeColorName"><i class="fas fa-minus fa-5x"></i></button>
+                    <span class="number" id="addition_to_cart_number">0</span>
+                    <button class="number_add" onclick="document.getElementById('addition_to_cart_number').innerHTML=parseInt(document.getElementById('addition_to_cart_number').innerHTML)+1"><i class="fas fa-plus fa-5x"></i></button>
+                </div>
+                <div class="close">
+                    <button class="cancel" onclick="document.getElementById('popup').style.display='none'">Cancel</button>
+                    <button class="agree" onclick="agree()">Agree</button>
+                </div>
+            </article>
+            
+    
+            <!-- Details from Purchase -->
+            <div class="details">
+                <p><strong>DETAILS</strong></p>
+                <ul id="checkout_details"></ul>
+            </div>
+
+
+        </main>
+
+        <footer>
+            <p onclick="document.getElementById('helpPopup').style.display='block'"><strong>Help?</strong><br></p>
+            <!-- Popup -->
+            <article class="popup" id="helpPopup" style="display: none;">
+                <h4></span><strong>Help</strong></h4>
+                <div>
+                    <p><b>How do I add shipping, handling or taxes other than VAT to my purchase bill?</b></p>
+                    <p>To add additional cost (other than the product purchase cost) into your bill, use the Expense
+                        tab and directly select an account from your chart of accounts to register those expenses.</p>
+
+                    <p><b>Why does my inventory not get updated when I create only a bill for purchased goods?</b></p>
+                    <p>The receiving note is the leading document when it comes to inventory quantity and value update.
+                        If you convert your purchase order directly into a bill or create a new bill for your purchased
+                        goods, those will directly be posted into your Cost of Goods sold and do not create any
+                        inventory entries. A receiving note is needed to generate inventory movements.</p>
+
+                    <p><b>How do I change the receiving address?</b></p>
+                    <p>To have your supplier deliver to another than your company address, you will need to set up
+                        either a vendor or a customer that shows the wanted ship-to address. Once done, please open
+                        your purchase document, scroll down and open the advanced section. In the field *type* select
+                        either customer or vendor (depends under which category you set up the needed address) and link
+                        the bearer of your ship-to address.</p>
+                </div>
+                <div class="close">
+                    <button class="cancel" onclick="document.getElementById('helpPopup').style.display='none'">Close</button>
+                </div>
+            </article>
+            <strong>Shipping & Returns</strong>
+        </footer>
+    </body>
+</html>

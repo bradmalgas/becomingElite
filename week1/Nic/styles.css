@@ -1,0 +1,323 @@
+/* Body CSS */
+body{
+    width: 33%;
+    padding:10px;
+    margin-left: 33%;
+    display: inline-block;
+    white-space: nowrap;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+/* Heading */
+header{
+    position: relative;
+}
+header h1{
+    position: relative;
+    text-align: left;
+    width:100%;
+}
+
+
+/* Rating Section */
+section.star_rating ul{
+    white-space: nowrap;
+    margin: 0%;
+    padding-left:10px;
+}
+section.star_rating{
+    display: inline-block;
+}
+section.star_rating ul span.rating{
+    color: grey;
+    padding-left:40px;
+}
+
+
+/* Purchase division */
+main div.purchase ul span.discounted_price{
+    color: red;
+}
+main div.purchase{
+    padding-left:10px;
+}
+main div.purchase ul{
+    padding:0px;
+}
+main div.purchase ul span{
+    padding-right: 8%;
+}
+main div.purchase ul span.discounted_price{
+    font-size: 30px;
+}
+main div.purchase ul span.original_price{
+    color: grey;
+}
+main div.purchase ul span.discount{
+    color: grey;
+}
+main div.purchase p{
+    padding-left: 20px;
+}
+
+
+/* Colors */
+main div.colors{
+    padding-left:10px;
+    position: relative;
+}
+
+main div.colors ul{
+    position: static;
+    padding:0px;
+    white-space: normal;
+}
+main div.colors label[for*="color"] span.name{
+    opacity: 0;
+    width: 0;
+    margin: 0;
+    display: none;
+    cursor: auto;
+}
+input[id*="color"]:checked + label[for*="color"] span.name{
+    opacity:100%;
+    width: auto;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 80px;
+}
+main div.colors label[for*="color"] span[class*="name"]{
+    position: fixed;
+}
+i[class*="fa-circle"]{
+    padding:2px;
+    text-align: center;
+    vertical-align: middle;
+}
+i[class*="fa-circle"]:hover{
+    border: 1px solid lightgray;
+    border-radius: 50%;
+    box-shadow: 1px 1px lightgray;
+}
+label{
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+}
+input[type="radio"]{
+    opacity: 0;
+    width: 0;
+    margin: 0;
+    display: none;
+}
+input[id*="color"]:checked + label[for*="color"] span i[class*="fa-circle"]{
+    border: 1px solid black;
+    border-radius: 50%;
+    box-shadow: 1px 1px black;
+}
+
+
+/* Count and "Add to Cart" style */
+main div.colors span.purchasing_count{
+    display: inline-block;
+    padding:29px;
+    padding-left:40px;
+    padding-right:40px;
+    border-radius:50px;
+    border: 1.5px solid black;
+    color: black;
+    text-decoration:none;
+    margin-bottom: 10px;
+    margin-top:10px;
+}
+/* ad to cart button */
+main div.colors button.add_to_cart{
+    display: inline-block;
+    padding:30px;
+    padding-left:120px;
+    padding-right:120px;
+    border-radius:50px;
+    background-color: black;
+    margin-left:30px;
+    color:white;
+    text-decoration:none;
+    margin-bottom: 10px;
+    margin-top:10px;
+    outline: none;
+    border-style:solid;
+}
+/* details text */
+main div.details{
+    padding-left:10px;
+    border-top: 1.5px solid black;
+    border-bottom: 1.5px solid black;
+    margin-bottom: 20px;
+}
+
+/* Popup */
+main article.popup{
+    position: relative;
+    display: none;
+    background-color: #efefef;
+    border: 2px solid black;
+    width:100%;
+    height: 250px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+main article.popup h4{
+    position: absolute;
+    top: 10px;
+    left:0;
+    width: 100%;
+    white-space: normal;
+    text-align: center;
+    margin: 0;
+}
+main article.popup div.close{
+    position: absolute;
+    bottom: 10px;
+    margin-left: 50%;
+    width:50%;
+}
+main article.popup div.change{
+    position: absolute;
+    top: 25%;
+    width: 75%;
+    margin-left:25%;
+}
+main article.popup span.color{
+    position: absolute;
+    white-space: normal;
+    width:50px;
+    left: 10%;
+    top: 40%;
+}
+main article.popup div.change span.number{
+    width: fit-content;
+    position: absolute;
+    left: 36%;
+    top: 7px;
+    font-size: 55px;
+}
+main article.popup div.change button{
+    margin-right:5%;
+    margin-left:5%;
+    outline: none;
+    padding:5px;
+    padding-left:8.16px;
+    padding-right: 8.16px;
+    text-align: center;
+    vertical-align: middle;
+    color: white;
+    background: black;
+    border-style: solid;
+    border-radius: 50%;
+    margin: 0;
+}
+main article.popup div.change button.number_minus{
+    position: absolute;
+    left: 5%;
+}
+main article.popup div.change button.number_add{
+    position: absolute;
+    right: 5%;
+}
+main article.popup div.close button{
+    margin-right:5%;
+    margin-left:5%;
+    outline: none;
+    padding:10px;
+    padding-left:13.16px;
+    padding-right: 13.16px;
+    text-align: center;
+    vertical-align: middle;
+    border-style: solid;
+    border-radius: 25px;
+}
+main article.popup div.close button.cancel{
+    color: black;
+    background: lightpink;
+}
+main article.popup div.close button.agree{
+    color: black;
+    background: lightgreen;
+}
+
+ 
+
+/* Details division */
+main div.details ul{
+    padding:0;
+}
+
+
+/* Footer Style */
+footer{
+    padding-left:10px;
+}
+footer a{
+    display: block;
+    text-decoration:none;
+    color: black;
+}
+
+
+
+
+
+
+
+/* Media Queries */
+
+@media screen and (max-width: 1400px){
+    body{
+        width: 50%;
+        margin-left: 25%;
+    }
+
+}
+
+@media screen and (max-width: 900px){
+    body{
+        width: 75%;
+        margin-left: 12.5%;
+    }
+
+}
+
+@media screen and (max-width: 600px){
+    body{
+        width: 90%;
+        margin-left: 5%;
+    }
+
+}
+
+@media screen and (max-width: 500px){
+    body{
+        width: 100%;
+        margin-left:0;
+    }
+    main div.colors span.purchasing_count{
+        display: block;
+        width: 25%;
+        padding:0.5em;
+    }
+    main div.colors button.add_to_cart{
+        display: block;
+        width:50%;
+        padding:20px;
+        margin:0;
+        margin-bottom: 10px;
+    }
+    div.details{
+        width:94%;
+    }
+    main article.popup{
+        width: 95%;
+    }
+}
