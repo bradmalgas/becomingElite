@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+  <head>
+ <meta charset = "UTF-8">
+ <title>Product Page</title>
+ <link rel = "stylesheet"
+   type = "text/css"
+   href = "myStyle.css" />
+  </head>
+<body>
+
+
+<main class="container">
+ 
+  <!-- Product Image -->
+  <div class="left-column">
+    <img data-image="black" src="images/black.png" alt="">
+    <img data-image="blue" src="images/blue.png" alt="">
+    <img data-image="red" class="active" src="images/red.png" alt="">
+  </div>
+ 
+ 
+  <!-- Right Column -->
+  <div class="right-column">
+ 
+    <!-- Product Description -->
+    <div class="product-description"> 
+      <h1>HICKIES Originals</h1>
+      <div class="reviews">
+          <div class="review1"><span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span></div>
+          <div class="review2"><p>1,293 Reviews</p></div>
+    
+      </div>
+      <div class="pricing">
+          <div class="pricing1"><p>$14.99</p></div>
+          <div class="pricing2"><p>$17.99</p></div>
+          <div class="pricing3"><p><b>25% OFF</b></p></div>      
+      </div>   
+      <p><e>ONLINE EXCLUSIVE</e></p>
+    </div>
+ 
+    <!-- Product Configuration -->
+    <div class="product-configuration">
+ 
+      <!-- Product Color -->
+      <div class="product-color">
+        <h4 style="display: inline";><b>Color: </b></h4><p style="display:inline"; id="colorToChange">Red</p>
+ 
+        <div class="color-choose">
+          <div>
+            <input data-image="red" type="radio" id="red" name="color" value="red" checked onclick="changeText(this.id)">
+            <label for="red"><span></span></label>
+          </div>
+          <div>
+            <input data-image="blue" type="radio" id="blue" name="color" value="blue" onclick="changeText(this.id)">
+            <label for="blue"><span></span></label>
+          </div>
+          <div>
+            <input data-image="black" type="radio" id="black" name="color" value="black" onclick="changeText(this.id)">
+            <label for="black"><span></span></label>
+          </div>
+            <div>
+            <input data-image="white" type="radio" id="white" name="color" value="white" onclick="changeText(this.id)">
+            <label for="white"><span></span></label>
+          </div>
+            <div>
+            <input data-image="orange" type="radio" id="orange" name="color" value="orange" onclick="changeText(this.id)">
+            <label for="orange"><span></span></label>
+          </div>
+            <div>
+            <input data-image="yellow" type="radio" id="yellow" name="color" value="yellow" onclick="changeText(this.id)">
+            <label for="yellow"><span></span></label>
+          </div>
+            <div>
+            <input data-image="darkblue" type="radio" id="darkblue" name="color" value="dark blue" onclick="changeText(this.id)">
+            <label for="darkblue"><span></span></label>
+          </div>
+            <div>
+            <input data-image="greyblue" type="radio" id="greyblue" name="color" value="grey blue" onclick="changeText(this.id)">
+            <label for="greyblue"><span></span></label>
+          </div>
+            <div>
+            <input data-image="beige" type="radio" id="beige" name="color" value="beige" onclick="changeText(this.id)">
+            <label for="beige" ><span></span></label>
+          </div>
+            <div>
+            <input data-image="lightblue" type="radio" id="lightblue" name="color" value="light blue" onclick="changeText(this.id)">
+            <label for="lightblue"><span></span></label>
+          </div>
+            <div>
+            <input data-image="green" type="radio" id="green" name="color" value="green" onclick="changeText(this.id)">
+            <label for="green"><span></span></label>
+          </div>
+            <div>
+            <input data-image="pink" type="radio" id="pink" name="color" value="pink" onclick="changeText(this.id)">
+            <label for="pink"><span></span></label>
+          </div>
+            <div>
+            <input data-image="marron" type="radio" id="marron" name="color" value="marron" onclick="changeText(this.id)">
+            <label for="marron"><span></span></label>
+          </div>
+            
+        </div>
+ 
+      </div>
+        
+        
+        <p><b>Size guide</b></p>
+        <p><b>Custom price</b></p>
+ 
+ 
+    <!-- Product Pricing -->
+    <div class="product-price">
+      <input type="text" value="3" class="input-price">
+      <a href="#" class="cart-btn" id="cartButton">Checkout Now</a>
+    </div>
+  </div>
+      <hr>
+        <h2><b>DETAILS</b></h2>
+        <div class="color-choose2">
+          <div>
+            <input type="radio" id="rosybrown" name="color" value="rosybrown" checked>
+            <label for="rosybrown"><span></span></label>
+          </div>
+          <div>
+            <input type="radio" id="bisque" name="color" value="bisque">
+            <label for="bisque"><span></span></label>
+          </div>
+          <div>
+            <input type="radio" id="burlywood" name="color" value="burlywood">
+            <label for="burlywood"><span></span></label>
+          </div>      
+      <hr>
+      
+
+        
+
+</div>
+         <!-- Help -->  
+      <div id="helpButton">
+          <button>Need help</button>   
+    </div>
+    <div id="helpModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>If any problems are detected of if you wish to add any comment, our support service is 
+        avaiable 7/7 and 24/24 to assist you. Contact us on the 0768441848. T's & C's may apply. Or alternatively, 
+      feel free to feel the form below. Our team will get back to you as soon as possible. </p>
+          <div class="contact">     
+          <h3>Name</h3>
+          <input type="text" placeholder="Name.." required autofocus>
+          <h3>Surname</h3> 
+          <input type="email" placeholder="Email.." required autofocus>
+          <h3>Country</h3>
+          <select  name="Country">
+            <option value="France">France</option>
+            <option value="South Africa">South Africa</option>
+            <option value="USA">USA</option>
+          </select>
+          <h3>Subject</h3>
+          <input type="text" placeholder="" style="height:200px" required autofocus>
+            
+      </div> 
+      <div class="contact_button">
+        <input type="submit" value="Submit"> 
+      </div>
+  </div>       
+    </div>
+      
+      <h4><b>Shipping Return</b></h4>
+  </div>
+         
+    
+<div id="productModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content-product">
+    <span class="close1">&times;</span>
+    <p>Please add the quantity of the item you selected</p>
+    <div class="quantity-control" style="display: inline">
+        <h4 style="display: inline"><b>Red</b></h4>
+        <button class="plus-button" style="display: inline">+</button>
+        <h3 style="display: inline"; style="margin-right:10px";><b>0</b></h3>
+        <button class="minus-button" style="display: inline">-</button>
+      </div>
+      <br>
+      <br>
+      <br>
+      <div class="quantity-button">
+          <button class="agree-button">Agree</button>
+          <button class="cancel-button">Cancel</button>
+      </div>
+  </div>
+        
+</div>
+<script>
+var modal1 = document.getElementById("productModal");
+var btn1 = document.getElementById("cartButton");
+var span1 = document.getElementsByClassName("close1")[0];
+
+btn1.onclick = function() {
+  modal1.style.display = "block";
+}
+
+span1.onclick = function() {
+  modal1.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal1) {
+    modal1.style.display = "none";
+  }
+}
+
+</script>    
+      
+<script>
+    function changeText(value) {
+        document.getElementById('colorToChange').innerHTML = value;
+    }
+    </script>
+    
+    
+<script>
+var modal = document.getElementById("helpModal");
+var btn = document.getElementById("helpButton");
+var span = document.getElementsByClassName("close")[0];
+
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+</script>
+
+</main>
+    </body>
+        </html>

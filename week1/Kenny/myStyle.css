@@ -1,0 +1,401 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+
+.left-column {
+  width: 45%;
+  position: relative;
+}
+
+.left-column img {
+  width: 100%;
+  height: auto;
+  margin-top: 250px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+ 
+.left-column img.active {
+  opacity: 1;
+}
+
+.right-column {
+  width: 50%;
+  text-align: left;
+  margin-top: 20px;
+  margin-right: 50px;
+  float:right;
+}
+.product-description h1 {
+  font-weight: 750;
+  font-size: 40px;
+  letter-spacing: -2px;
+}
+
+.review1 {
+    display: inline-block;
+    margin-right: 25px;
+    color:darkgrey;
+    font-size: 25px;
+    font-weight: 400;
+    direction: rtl;
+    unicode-bidi: bidi-override;
+}
+.review1 > span:hover:before,
+.review1 > span:hover ~ span:before {
+   content: "\2605";
+   position: absolute;
+}
+.review2 {
+    display: inline-block;
+    margin-right: 25px;
+    color:darkgrey;
+    font-size: 18px;
+    font-weight: 400;   
+}
+
+.review1 > span {
+  display: inline-block;
+  position: relative;
+  width: 1.1em;
+}
+
+.pricing2 {
+    display: inline-block;
+    margin-right: 25px;
+    color:darkgrey;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.pricing1 {
+    display: inline-block;
+    color: indianred;
+    margin-right: 25px;
+    font-size: 30px;
+    font-weight: 650;
+}
+
+.pricing2 {
+    display: inline-block;
+    margin-right: 25px;
+    color:darkgrey;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.pricing3 {
+    display: inline-block;
+    font-weight: 200;
+    font-size: 18px;
+    font-weight: 600;
+    color:darkgrey;
+}
+
+
+ 
+.color-choose div {
+  display: inline-block;
+    margin-bottom: 30px;
+}
+ 
+.color-choose input[type="radio"] {
+  display: none;
+}
+ 
+.color-choose input[type="radio"] + label span {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  margin: -1px 4px 0 0;
+  cursor: pointer;
+  border-radius: 50%;
+   border: 12px solid white;
+}
+ 
+.color-choose input[type="radio"] + label span {
+  border: 5px solid #FFFFFF; 
+}
+.color-choose input[type="radio"] + label span:hover {
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,0.55);
+}
+ 
+.color-choose input[type="radio"]#red + label span {
+  background-color: #FF0000;
+}
+.color-choose input[type="radio"]#blue + label span {
+  background-color: #314780;
+}
+.color-choose input[type="radio"]#black + label span {
+  background-color: #323232;
+}
+.color-choose input[type="radio"]#white + label span {
+  background-color: #ffffff;
+}
+.color-choose input[type="radio"]#orange + label span {
+  background-color: #ff8c00;
+}
+.color-choose input[type="radio"]#yellow + label span {
+  background-color: #fffb00;
+}
+.color-choose input[type="radio"]#darkblue + label span {
+  background-color: #070082;
+}
+.color-choose input[type="radio"]#greyblue + label span {
+  background-color: #041f45;
+}
+.color-choose input[type="radio"]#beige + label span {
+  background-color: #a37e52;
+}
+.color-choose input[type="radio"]#lightblue + label span {
+  background-color: #05b9f0;
+}
+.color-choose input[type="radio"]#green + label span {
+  background-color: #0fff03;
+}
+.color-choose input[type="radio"]#pink + label span {
+  background-color: #ff03e2;
+}
+.color-choose input[type="radio"]#marron + label span {
+  background-color: #c9ae73;
+}
+ 
+.color-choose input[type="radio"]:checked + label span {
+  background-image: url(images/check-icn.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,0.90);
+}
+
+/* Product Price */
+.product-price {
+  display: flex;
+
+}
+ 
+.input-price{
+  display: inline-block;
+  border-radius: 30px;
+  font-size: 25px;
+  color: #FFFFFF;
+  width: 60px;
+}
+
+.cart-btn {
+  display: inline-block;
+  background-color: black;
+  border-radius: 40px;
+  font-size: 18px;
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 15px 100px;
+  transition: .8s;
+  margin-left: 30px;
+}
+
+.cart-btn:hover {
+  background-color: #2C3539;
+}
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background-color: #ffff;
+  margin-top: 5%; /* 15% from the top and centered */
+  margin-left: 120px;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  text-align: left;
+  max-height: calc(100vh - 210px);
+  overflow-y: auto;
+}
+
+.contact input[type=text], select, textarea {
+  width: 50%; 
+  margin-left: 50px;
+  padding: 14px;   
+  border: 2px solid #ccc; 
+  border-radius: 5px; 
+  box-sizing: border-box; 
+  margin-top: 6px; 
+  margin-bottom: 16px; 
+}
+
+.contact input[type=email]{
+  width: 50%; 
+  margin-left: 50px;
+  padding: 14px;   
+  border: 2px solid #ccc; 
+  border-radius: 5px; 
+  box-sizing: border-box; 
+  margin-top: 6px; 
+  margin-bottom: 16px;  
+}
+
+ h3{
+   margin-left: 50px; 
+}
+
+.contact_button input[type=submit] {
+  text-align: center;
+  margin-left: 50px;
+  cursor: pointer;
+  width: 10%;
+  font-size: 17px;
+  padding: 7px 7px;
+}
+
+ .contact_button: hover {   
+  opacity: 0.7;
+}
+
+.contact_button input[type=submit]: hover {   
+  opacity: 0.7;
+}
+
+.modal-content-product {
+  background-color: #ffff;
+  margin-top: 15%; /* 15% from the top and centered */
+  margin-left: 120px;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  text-align: center;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.close1 {
+  color: #aaa;
+  float: right;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.close1:hover,
+.close1:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+.color-choose2 div {
+  display: inline-block;
+    margin-bottom: 30px;
+}
+ 
+.color-choose2 input[type="radio"] {
+  display: none;
+}
+ 
+.color-choose2 input[type="radio"] + label span {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  margin: -1px 4px 0 0;
+  cursor: pointer;
+  border-radius: 50%;
+   border: 12px solid white;
+}
+ 
+.color-choose2 input[type="radio"] + label span {
+  border: 5px solid #FFFFFF; 
+}
+.color-choose2 input[type="radio"] + label span:hover {
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,0.55);
+}
+ 
+.color-choose2 input[type="radio"]#rosybrown + label span {
+  background-color: rosybrown;
+}
+.color-choose2 input[type="radio"]#bisque + label span {
+  background-color: bisque;
+}
+.color-choose2 input[type="radio"]#burlywood + label span {
+  background-color: burlywood;
+}
+
+ 
+.color-choose2 input[type="radio"]:checked + label span {
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,0.90);
+}
+
+.quantity-button{
+    display:inline-block;
+}
+
+.agree-button{
+    background-color: forestgreen;
+    border-radius: 10%;
+    color: white;
+    padding: 10px 20px;
+    font-size: 15px;
+    margin-left: 400px;
+    margin-right:20px;
+}
+
+.cancel-button{
+    background-color: indianred;
+    border-radius: 10%;
+    color: white;
+    padding: 10px 20px;
+    font-size: 15px;
+}
+
+
+
+.quantity-control{
+    display:inline-block;
+}
+
+.plus-button{
+    display: inline-block;
+    background-color: black;
+    border-radius: 50%;
+    color: white;
+    padding: 10px 20px;
+    font-size: 25px;
+    margin-left: 20px;
+}
+
+.minus-button{
+    display: inline-block;
+    background-color: black;
+    border-radius: 50%;
+    color: white;
+    padding: 10px 20px;
+    font-size: 25px;
+    margin-left: 10px;
+    margin-right: 20px;
+}

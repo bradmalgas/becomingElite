@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Author: B Malgas (Super Saiyans) - BootStrap template "Ecommerce-Template-Bootstrap" obtained from https://mdbootstrap.com/freebies/jquery/e-commerce/ -->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>HICKIES Originals</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="css/mdb.min.css" rel="stylesheet">
+  <!-- Custom addons -->
+  <link href="css/style.min.css" rel="stylesheet">
+</head>
+
+<body >
+  <!--Main layout-->
+  <main >
+    <div class="container dark-grey-text mt-5 " >
+      <h1 class="my-1 h1"> <!-- align="center" -->HICKIES Originals</h1>
+      <!--Grid row. try: justify-content-center -->
+      <div class="row wow fadeIn ">
+
+        <!--Grid column-->
+        <div class="col-md-6 mb-4 ">
+
+          <!--Content-->
+          <div class="p-4">
+            <div class="mb-3">
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+              <span class="smallSpan">1,293 reviews</span>
+            </div>
+
+            <p class="lead">
+              <span class="priceSpan">$14.99</span>
+              <span class="smallSpan">$17.99</span>
+              <span class="smallSpan">25% off</span>
+            </p>
+            <p class="font-weight-bolder">ONLINE EXCLUSIVE</p>
+            <p class="font-weight-bold" style="display:inline;">COLOR: </p><p style="display:inline;" id="colorToChange"></p>
+            <div class="color-choose">
+              <input style="background-color: #a30000;" type="radio" id="Electric Red" name="color" onclick="changeText(this.id)"><label for="Electric Red"><span style="background-color: #a30000;"></span></label>
+              <input style="background-color: #4b00ad;" type="radio" id="Wacky Purple" name="color" onclick="changeText(this.id)"><label for="Wacky Purple"><span style="background-color: #4b00ad;"></span></label>
+              <input style="background-color: #000000;" type="radio" name="color" id="Void Black" onclick="changeText(this.id)"><label for="Void Black"><span style="background-color: #000000;"></span></label>
+              <input style="background-color: #faffc7;" type="radio" name="color" id="Crystal White" onclick="changeText(this.id)"><label for="Crystal White"><span style="background-color: #faffc7;"></span></label>
+              <input style="background-color: #ff8c00;" type="radio" name="color" id="Boring Orange" onclick="changeText(this.id)"><label for="Boring Orange"><span style="background-color: #ff8c00;"></span></label>
+              <input style="background-color: #fffb00;" type="radio" name="color" id="Banana Yellow" onclick="changeText(this.id)"><label for="Banana Yellow"><span style="background-color: #fffb00;"></span></label>
+              <input style="background-color: #070082;" type="radio" name="color" id="Stew Blue" onclick="changeText(this.id)"><label for="Stew Blue"><span style="background-color: #070082;"></span></label>
+              <input style="background-color: #041f45;" type="radio" name="color" id="Midnight Blue" onclick="changeText(this.id)"><label for="Midnight Blue"><span style="background-color: #041f45;"></span></label>
+              <input style="background-color: #a37e52;" type="radio" name="color" id="Sand Tan" onclick="changeText(this.id)"><label for="Sand Tan"><span style="background-color: #a37e52;"></span></label>
+              <input style="background-color: #05b9f0;" type="radio" name="color" id="Baby Blue" onclick="changeText(this.id)"><label for="Baby Blue"><span style="background-color: #05b9f0;"></span></label>
+              <input style="background-color: #0fff03;" type="radio" name="color" id="Lime Green" onclick="changeText(this.id)"><label for="Lime Green"><span style="background-color: #0fff03;"></span></label>
+            </div>
+            <div class="color-choose">
+            <input style="background-color: #ff03e2;" type="radio" name="color" id="Lambo Pink" onclick="changeText(this.id)"><label for="Lambo Pink"><span style="background-color: #ff03e2;"></span></label>
+            <input style="background-color: #c9ae73;" type="radio" name="color" id="Cardboard Brown" onclick="changeText(this.id)"><label for="Cardboard Brown"><span style="background-color: #c9ae73;"></span></label>
+            <input style="background-color: #067d34;" type="radio" name="color" id="Grass Green" onclick="changeText(this.id)"><label for="Grass Green"><span style="background-color: #067d34;"></span></label>
+            <input style="background-color: #4b364f;" type="radio" name="color" id="Vomit Grey" onclick="changeText(this.id)"><label for="Vomit Grey"><span style="background-color: #4b364f;"></span></label>
+            <input style="background-color: #593b06;" type="radio" name="color" id="Almost Gold" onclick="changeText(this.id)"><label for="Almost Gold"><span style="background-color: #593b06;"></span></label>
+            <input style="background-color: #57ffee;" type="radio" name="color" id="Cyan" onclick="changeText(this.id)"><label for="Cyan"><span style="background-color: #57ffee;"></span></label>
+            <input style="background-color: #c2bcb2;" type="radio" name="color" id="49 Shades Left" onclick="changeText(this.id)"><label for="49 Shades Left"><span style="background-color: #c2bcb2;"></span></label>
+            </div>
+            <p class="font-weight-bold">Size Guide</p>
+            <p class="font-weight-bold">Your Custom Fit</p>
+            <div class="form-inline">
+              <form>
+                <input id="quantity" type="number" value="0" aria-label="Search" class="form-control" style="border-radius:42px;width: 100px">
+                <button id="addToCart" class="btn btn-black btn-md" type="button" disabled>Add to cart
+                  <i class="fas fa-shopping-cart ml-1"></i>
+                </button>
+              </form>
+            </div>
+            <div id="cartModal" class="modal">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <span id="closeCart" class="close-btn">&times;</span>
+                </div>
+                <div class="modal-body">
+                  <h6>Please add the quantity of the item you  have selected</h6>
+                  <div style="padding-top: 22px;padding-bottom: 22px;">
+                    <p class ="modal-text" id="colourToBuy">Sample Color</p>
+                    <div class="modal-group">
+                      <button class="increment btn btn-black">-</button>
+                      <p class="modal-text" id="quantityToBuy" style="font-weight:bold;">4</p>
+                      <button class="increment btn btn-black">+</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button id="agree" class="btn green" onclick="displayCircles()">Agree</button>
+                  <button id="cancel" class="btn red">Cancel</button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!--Content-->
+
+        </div>
+        <!--Grid column-->
+
+      </div>
+      <!--Grid row-->
+
+      <hr>
+      <p class="font-weight-bold">DETAILS</p>
+      <div id="addedColours"></div>
+      <hr>
+      <!--Grid row-->
+      <div class="row d-flex justify-content-center wow fadeIn">
+
+      </div>
+      <!--Grid row-->
+
+    </div>
+  </main>
+  <!--Main layout-->
+
+  <!--Footer-->
+  <footer class="page-footer text-center font-small mt-4 wow fadeIn">
+
+    <hr class="my-4">
+
+    <!-- Links -->
+    <div class="pb-4">
+      <p id="needHelp" style="cursor: help;">Need Help?</p>
+            <div id="helpModal" class="modal">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <span id="closeHelp" class="close-btn">&times;</span>
+                </div>
+                <div class="modal-body">
+                  <p><b>Need Help - Payments</b></p>
+                  <p>HICKIES currently accepts payments via credit card (Visa and Mastercard), EFT and cash deposit.
+                    We have a bank account with all the major banks in order to process payments faster. If you're
+                    paying via EFT, please make sure that you make payment into the account of ours that's the same as
+                    the bank that you're using (ie: ABSA to ABSA, FNB to FNB, etc). If you're making an EFT from any
+                    other bank, please make payment into our Standard Bank account.</p>
+                  <p><u>Please note:</u> We do not accept cheque payments under any circumstance.</p>
+                  <p>In order to speed up the ordering process, send your proof of payment to:
+                    payments@hickies.co.za or alternatively fax it to: 086 678 9861.</p>
+                </div>
+                <div class="modal-footer">
+                </div>
+              </div>
+            </div>
+      <p id="refunds" style="cursor: pointer;">Refund Policy</p>
+            <div id="returnsModal" class="modal">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <span id="closeReturns" class="close-btn">&times;</span>
+                </div>
+                <div class="modal-body">
+                  <p><b>Refund Policy</b></p>
+                  <p>Thanks for purchasing from HICKIES.</p>
+                  <p>In order to be eligible for a refund, you have to return the product within 30 calendar days of
+                    your purchase. The product must be in the same condition that you receive it and undamaged in any
+                    way.</p>
+                  <p>After we receive your item, our team of professionals will inspect it and process your refund.
+                    The money will be refunded to the original payment method you’ve used during the purchase.
+                    For credit card payments it may take 5 to 10 business days for a refund to show up on your credit
+                    card statement.</p>
+                  <p>If the product is damaged in any way, or you have initiated the return after 30 calendar days have
+                    passed, you will not be eligible for a refund.</p>
+                  <p>If anything is unclear or you have more questions feel free to contact our customer support team.</p>
+                </div>
+                <div class="modal-footer">
+                </div>
+              </div>
+            </div>
+
+    </div>
+    <!-- Links -->
+
+  </footer>
+  <!-- Footer-->
+
+  <!-- Scripts -->
+  <script type="text/javascript">
+    function changeText(value) {
+        document.getElementById('colorToChange').innerHTML = value;
+        document.getElementById('colourToBuy').innerHTML = value;
+        var add = document.getElementById("addToCart");
+        add.disabled = false;
+    }
+    function displayCircles(){
+      document.getElementById("cartModal").style.display = "none";
+      var num = document.getElementById('quantity').value;
+      var div = document.getElementById('addedColours');
+      var product = document.getElementById('colorToChange').innerHTML;
+      var color = document.getElementById(product).style.backgroundColor;
+      div.innerHTML = "";
+      for (i=1; i<=num; i++) {
+        div.innerHTML += "<span class='dot' style='background-color: "+color+";'>"+i+"</span>"
+      }
+    }
+    </script>
+    <script>
+      var cartModal = document.getElementById("cartModal");
+      var returnsModal = document.getElementById("returnsModal");
+      var helpModal = document.getElementById("helpModal");
+
+      var add = document.getElementById("addToCart");
+      var help = document.getElementById("needHelp");
+      var returns = document.getElementById("refunds");
+
+      var closeCart = document.getElementById("closeCart");
+      var cancel = document.getElementById("cancel");
+      var closeHelp = document.getElementById("closeHelp");
+      var closeReturns = document.getElementById("closeReturns");
+
+      cancel.onclick = function() {cartModal.style.display = "none";}
+      add.onclick = function() {cartModal.style.display = "block";}
+      closeCart.onclick = function() {cartModal.style.display = "none";}
+
+
+      closeHelp.onclick = function() {helpModal.style.display = "none";}
+      help.onclick = function() {helpModal.style.display = "block";}
+
+      closeReturns.onclick = function() {returnsModal.style.display = "none";}
+      returns.onclick = function() {returnsModal.style.display = "block";}
+  </script>
+  <!-- Scripts -->
+</body>
+
+</html>
